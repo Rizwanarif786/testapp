@@ -1,11 +1,8 @@
 import { Router } from 'express';
+import { createUser } from '../controllers/user.controller.js';
 
 const router = Router();
 
-router.route('/').get((req, res) => {
-    console.log(req.param)
-    res.status(200)
-        .send(`<h1>My Custom Router is now working</h1>`)
-})
+router.route("/register").post(createUser);
 
 export default router;

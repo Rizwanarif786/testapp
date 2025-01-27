@@ -1,6 +1,6 @@
-import mongoose, { Schema} from "mongoose";
+import mongoose, { Schema } from "mongoose";
 
-const UserSchema = new Schema({
+const UserModel = new Schema({
     firstName:{
         type: String,
         required: [true, 'First name is required']
@@ -25,4 +25,4 @@ const UserSchema = new Schema({
     { timestamps: true }
 )
 
-export default User = mongoose.model('User', UserSchema);
+export const User = mongoose.model('User', UserModel);
